@@ -33,6 +33,10 @@ public class PlayerPlatformerController : PhysicsObject {
             }
         }
 
+        if (Input.GetButtonDown ("Horizontal")) {
+            velocity.x = jumpTakeOffSpeed * Input.GetAxis("Horizontal");
+        }
+
         bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
         if (flipSprite) 
         {
