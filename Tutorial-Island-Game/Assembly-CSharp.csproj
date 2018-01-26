@@ -55,6 +55,7 @@
      <Compile Include="Assets\CompleteCameraController.cs" />
      <Compile Include="Assets\PhysicsObject.cs" />
      <Compile Include="Assets\PlayerPlatformerController.cs" />
+     <Compile Include="Assets\scenemanager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/home/visa/Unity-2017.3.0p2/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
