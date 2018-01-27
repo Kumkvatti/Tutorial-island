@@ -465,7 +465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 238.5, y: -95}
+  m_AnchoredPosition: {x: 238.5, y: -41}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5000001}
 --- !u!114 &805235833
@@ -532,11 +532,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    DialogueName: test dialogue
     sentences:
-    - ihuyg
-    - gfghh
-    - hghhi
+    - Woah do you remember how you ended up here? You were pretty drunk there and
+      still are. Apparently you are not the calmest person when drunk.
+    - But anyways, we need to get you inside the cave, but the boulder is blocking
+      your path.
+    - Luckily you are THE Pete kauppinen. You have the latent ability to punch through
+      rocks with your bare fists.
+    - 'Now listen carefully: To perform a dragon punch input QWE, now do a dragon
+      punch and destroy the rock!'
 --- !u!114 &805235835
 MonoBehaviour:
   m_ObjectHideFlags: 0
