@@ -67,10 +67,8 @@ public class PlayerPlatformerController : PhysicsObject {
       }
 
       if (Input.GetButtonDown("Fire1")){
-        Debug.Log("got hit by ");
+        GameObject.Find("boulder").GetComponent<BoulderScript>().getHit(2);
+        Debug.Log("got hit by adasdsa3");
       }
-
     }
-
-
 }
