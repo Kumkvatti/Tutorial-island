@@ -14,6 +14,8 @@ public class PlayerPlatformerController : PhysicsObject {
     private Animator animator;
     private GameObject boulder;
 
+    private KeyCode [] Punch0 = new KeyCode[3]  { KeyCode.Q,  KeyCode.W, KeyCode.E };
+    private int expected = 0;
     // Use this for initialization
     void Awake ()
 
@@ -73,9 +75,11 @@ public class PlayerPlatformerController : PhysicsObject {
 //        GameObject.Find("boulder").GetComponent<BoulderScript>().getHit(2);
 //        Debug.Log("got hit by adasdsa3");
       }
+      Debug.Log(this.Punch0[this.expected]);
 
-      if (GetComponent<PhysicsObject>().collidedBoulder && Input.GetKeyDown(KeyCode.F)  )
+      if (GetComponent<PhysicsObject>().collidedBoulder && Input.GetKeyDown(this.Punch0[this.expected])  )
         {
+            this.expected += 1;
             Debug.Log("Collided with boulder!");
             boulder = GameObject.FindGameObjectWithTag("Boulder");
             if (boulder != null)
