@@ -6,7 +6,6 @@ using UnityEngine.UI;
 // manager that contains all dialogues in the game
 public class DialogueManager : MonoBehaviour {
 
-	public Text nameText;
 	public Text dialogueText;
 
 	public Animator animator;
@@ -14,14 +13,12 @@ public class DialogueManager : MonoBehaviour {
 	private Queue<string> sentences;
 	// Use this for initialization
 	void Start () {
-		sentences = new Queue<string> (); 
+		sentences = new Queue<string> ();
 	}
 
 	public void StartDialogue(Dialogue dialogue) {
 
 		animator.SetBool ("IsOpen", true);
-
-		nameText.text = dialogue.DialogueName;
 
 		sentences.Clear ();
 		foreach (string sentence in dialogue.sentences) {
