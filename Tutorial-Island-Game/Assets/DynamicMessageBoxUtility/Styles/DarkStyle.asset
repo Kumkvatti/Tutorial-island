@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c17009576a29245dea2619eeddfc0d61, type: 3}
+  m_Name: DarkStyle
+  m_EditorClassIdentifier: 
+  styleName: 
+  backgroundColour: {r: 0, g: 0, b: 0, a: 1}
+  backgroundImage: {fileID: 0}
+  titleText: Dark Style
+  titleFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  titleColour: {r: 1, g: 0.7241379, b: 0, a: 1}
+  bodyTextText: This is an example style
+  bodyTextColour: {r: 0.49852934, g: 0, b: 0.6397059, a: 1}
+  bodyTextFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  buttonColours:
+    m_NormalColor: {r: 0.28676468, g: 0.28676468, b: 0.28676468, a: 1}
+    m_HighlightedColor: {r: 0.28676468, g: 0.28676468, b: 0.28676468, a: 1}
+    m_PressedColor: {r: 0.28676468, g: 0.28676468, b: 0.28676468, a: 1}
+    m_DisabledColor: {r: 0.28676468, g: 0.28676468, b: 0.28676468, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0
+  buttonBackground: {fileID: 0}
+  buttonWidth: 1
+  buttonTextColour: {r: 1, g: 0.7241379, b: 0, a: 1}
+  buttonFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  buttonTextText: Done
+  MessageBoxHeight: 0.75
+  MessageBoxWidth: 0.75
