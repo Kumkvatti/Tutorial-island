@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial-Island-Game", "Tutorial-Island-Game.csproj", "{13C026B6-5E54-D2BD-1911-C52AC085B891}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial-Island-Game", "Assembly-CSharp.csproj", "{2817B8E6-F6AD-7B8A-AC89-845778A0D4CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{13C026B6-5E54-D2BD-1911-C52AC085B891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13C026B6-5E54-D2BD-1911-C52AC085B891}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13C026B6-5E54-D2BD-1911-C52AC085B891}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13C026B6-5E54-D2BD-1911-C52AC085B891}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2817B8E6-F6AD-7B8A-AC89-845778A0D4CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2817B8E6-F6AD-7B8A-AC89-845778A0D4CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2817B8E6-F6AD-7B8A-AC89-845778A0D4CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2817B8E6-F6AD-7B8A-AC89-845778A0D4CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

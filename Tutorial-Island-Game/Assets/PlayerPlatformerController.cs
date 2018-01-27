@@ -9,7 +9,6 @@ public class PlayerPlatformerController : PhysicsObject {
     public float jumpTakeOffSpeed = 7;
     public int frameCounter = 0;
     private int damage = 1;
-    private int inflicted_damage = 0;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
@@ -74,23 +73,15 @@ public class PlayerPlatformerController : PhysicsObject {
 //        GameObject.Find("boulder").GetComponent<BoulderScript>().getHit(2);
 //        Debug.Log("got hit by adasdsa3");
       }
-    Debug.Log( Input.GetKeyDown(KeyCode.F));
-    Debug.Log(GetComponent<PhysicsObject>().collidedBoulder);
 
       if (GetComponent<PhysicsObject>().collidedBoulder && Input.GetKeyDown(KeyCode.F)  )
         {
             Debug.Log("Collided with boulder!");
             boulder = GameObject.FindGameObjectWithTag("Boulder");
-            if (boulder != null && inflicted_damage < 3)
+            if (boulder != null)
             {
-                int current_damage = boulder.GetComponent<BoulderScript>().getHit(inflicted_damage + damage);
-                inflicted_damage += damage;
+                int current_damage = boulder.GetComponent<BoulderScript>().getHit(1);
             }
-            else
-            {
-                inflicted_damage = 0;
-            }
-            
         }
     }
 }
