@@ -3,21 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class scenemanager : MonoBehaviour {
 
 	// Use this for initialization
-	public int level = 1;
+	public int TargetLevel = 0;
 
 	void Start () {
-
+        this.nextLevel();
         // SceneManager.MergeScenes("MainScene","Scene0");
-        SceneManager.MergeScenes(SceneManager.GetSceneByName("MainScene"), SceneManager.GetSceneByName("Scene0"));
+        // SceneManager.MergeScenes(SceneManager.GetSceneByName("MainScene"), SceneManager.GetSceneByName("MainScene"));
 	}
 	
 
-    void nextLevel()
-    {
-        //level += 1;
-        //SceneManager.MergeScenes(level);
+    void nextLevel() {
+    	string s = "Scene" + TargetLevel;
+
+        Scene scene = SceneManager.GetActiveScene();
+        Debug.Log("Active scene is '" + scene.name + "'.");
+        Debug.Log("loading '" + s + "'.");
+
+    	if (scene != SceneManager.GetSceneByName("MainScene")){
+    		SceneManager.LoadScene("MainScene" );
+			SceneManager.LoadScene(s, LoadSceneMode.Additive);
+		}
     }
 }

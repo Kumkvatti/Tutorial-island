@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Awesome Movement\Scripts\Movement2D.cs" />
      <Compile Include="Assets\CompleteCameraController.cs" />
+     <Compile Include="Assets\completeLevel.cs" />
      <Compile Include="Assets\PhysicsObject.cs" />
      <Compile Include="Assets\PlayerPlatformerController.cs" />
      <Compile Include="Assets\scenemanager.cs" />
