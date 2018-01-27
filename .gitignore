@@ -35,3 +35,4 @@ sysinfo.txt
 #Added by Ilmari
 *.backup
 *.dll
+*.mdb
