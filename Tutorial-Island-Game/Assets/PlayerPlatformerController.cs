@@ -6,15 +6,18 @@ public class PlayerPlatformerController : PhysicsObject {
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
+    public int frameCounter = 0;
 
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
     // private Animator animator;
 
     // Use this for initialization
-    void Awake () 
+    void Awake ()
 
     {
-        spriteRenderer = GetComponent<SpriteRenderer> (); 
+        animator =  GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer> ();
         // animator = GetComponent<Animator> ();
     }
 
@@ -26,7 +29,7 @@ public class PlayerPlatformerController : PhysicsObject {
 
         if (Input.GetButtonDown ("Jump") && grounded) {
             velocity.y = jumpTakeOffSpeed;
-        } else if (Input.GetButtonUp ("Jump")) 
+        } else if (Input.GetButtonUp ("Jump"))
         {
             if (velocity.y > 0) {
                 velocity.y = velocity.y * 0.5f;
@@ -38,7 +41,7 @@ public class PlayerPlatformerController : PhysicsObject {
         }
 
         bool flipSprite = (spriteRenderer.flipX ? (move.x > 0.01f) : (move.x < 0.01f));
-        if (flipSprite) 
+        if (flipSprite)
         {
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
@@ -47,5 +50,22 @@ public class PlayerPlatformerController : PhysicsObject {
         // animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
 
         targetVelocity = move * maxSpeed;
+
+
     }
+
+    void Update ()
+    {
+      ComputeVelocity();
+      if (targetVelocity.x != 0 )
+      {
+        animator.SetBool("Walking", true);
+      }
+      else
+      {
+        animator.SetBool("Walking", false);
+      }
+    }
+
+
 }

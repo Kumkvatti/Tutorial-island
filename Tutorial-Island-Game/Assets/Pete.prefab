@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 212070828462150108}
   - component: {fileID: 114529127568969258}
   - component: {fileID: 114819533672080564}
+  - component: {fileID: 95816036005866142}
   m_Layer: 0
   m_Name: Pete
   m_TagString: Untagged
@@ -63,6 +64,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &95816036005866142
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1372555101749152}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5c92d6564696a40e8b9a2a46e029b386, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114529127568969258
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,7 +143,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4c953f5d9ccd346a589aa427f3b39cdc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d98d2d1977b344f1b22ff9510d69266, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
