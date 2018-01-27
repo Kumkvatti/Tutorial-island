@@ -17,9 +17,7 @@ public class scenemanager : MonoBehaviour {
         Debug.Log("Active scene is '" + scene.name + "'.");
         Debug.Log("loading '" + s + "'.");
 
-    	if (scene != SceneManager.GetSceneByName("MainScene")){
-    		SceneManager.LoadScene("MainScene" );
-			SceneManager.LoadScene(s, LoadSceneMode.Additive);
-		}
+		SceneManager.LoadScene("MainScene" );
+		SceneManager.LoadScene(s, LoadSceneMode.Additive);
     }
 }
