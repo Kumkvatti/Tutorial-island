@@ -54,6 +54,12 @@
      <Compile Include="Assets\Awesome Movement\Scripts\Movement2D.cs" />
      <Compile Include="Assets\CompleteCameraController.cs" />
      <Compile Include="Assets\completeLevel.cs" />
+     <Compile Include="Assets\DynamicMessageBoxUtility\CustomMessageBoxes\Scripts\DynamicMessageBox.cs" />
+     <Compile Include="Assets\DynamicMessageBoxUtility\CustomMessageBoxes\Scripts\MessageBoxCreator.cs" />
+     <Compile Include="Assets\DynamicMessageBoxUtility\CustomMessageBoxes\Scripts\MessageStyle.cs" />
+     <Compile Include="Assets\DynamicMessageBoxUtility\Examples\Scripts\CreateMessageBoxOnStart.cs" />
+     <Compile Include="Assets\DynamicMessageBoxUtility\Examples\Scripts\PreviewMessageBoxEditor.cs" />
+     <Compile Include="Assets\DynamicMessageBoxUtility\Examples\Scripts\StylePreviewer.cs" />
      <Compile Include="Assets\GameStarter.cs" />
      <Compile Include="Assets\PhysicsObject.cs" />
      <Compile Include="Assets\PlayerPlatformerController.cs" />
