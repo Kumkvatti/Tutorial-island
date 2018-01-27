@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Awesome Movement\Scripts\Movement2D.cs" />
+     <Compile Include="Assets\BoulderScript.cs" />
      <Compile Include="Assets\CompleteCameraController.cs" />
      <Compile Include="Assets\completeLevel.cs" />
      <Compile Include="Assets\DynamicMessageBoxUtility\CustomMessageBoxes\Scripts\DynamicMessageBox.cs" />
