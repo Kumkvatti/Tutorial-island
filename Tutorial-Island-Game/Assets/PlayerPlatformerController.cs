@@ -74,6 +74,8 @@ public class PlayerPlatformerController : PhysicsObject {
 //        GameObject.Find("boulder").GetComponent<BoulderScript>().getHit(2);
 //        Debug.Log("got hit by adasdsa3");
       }
+    Debug.Log( Input.GetKeyDown(KeyCode.F));
+    Debug.Log(GetComponent<PhysicsObject>().collidedBoulder);
 
       if (GetComponent<PhysicsObject>().collidedBoulder && Input.GetKeyDown(KeyCode.F)  )
         {

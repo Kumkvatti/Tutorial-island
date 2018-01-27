@@ -21,6 +21,9 @@ public class BoulderScript : MonoBehaviour {
 	    Debug.Log("got hit by '" + s + "'.");
         animator.SetInteger("Brokenness", s);
         // If you put destroying of gameobject here when s==3, for some reason collision box exists
+        if( s == 3 ){
+			GetComponent<BoxCollider2D>().enabled = false;
+        }
         return s;
 	}
 }
