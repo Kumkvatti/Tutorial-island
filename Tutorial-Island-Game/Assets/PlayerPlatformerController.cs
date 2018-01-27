@@ -65,6 +65,11 @@ public class PlayerPlatformerController : PhysicsObject {
       {
         animator.SetBool("Walking", false);
       }
+
+      if (Input.GetButtonDown("Fire1")){
+        Debug.Log("got hit by ");
+      }
+
     }
 
 
