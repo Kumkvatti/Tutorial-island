@@ -1,13 +1,13 @@
 sceneSetups:
 - path: Assets/MainScene.unity
   isLoaded: 1
-  isActive: 1
+  isActive: 0
 - path: Assets/MasterScene.unity
   isLoaded: 1
   isActive: 0
 - path: Assets/Scenes/scene0.unity
   isLoaded: 1
-  isActive: 0
+  isActive: 1
 - path: Assets/Scenes/Scene1.unity
   isLoaded: 1
   isActive: 0
