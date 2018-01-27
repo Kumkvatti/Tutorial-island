@@ -32,3 +32,6 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
+#Added by Ilmari
+*.backup
+*.dll
