@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class BoulderScript : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    private SpriteRenderer spriteRenderer;
+    private Animator animator;
+
+    // Use this for initialization
+    void Start () {
+        animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -14,7 +17,10 @@ public class BoulderScript : MonoBehaviour {
 		
 	}
 
-	public void getHit(int s){
+	public int getHit(int s){
 	    Debug.Log("got hit by '" + s + "'.");
+        animator.SetInteger("Brokenness", s);
+        // If you put destroying of gameobject here when s==3, for some reason collision box exists
+        return s;
 	}
 }

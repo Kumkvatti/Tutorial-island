@@ -1,24 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerPlatformerController : PhysicsObject {
 
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
     public int frameCounter = 0;
+    private int damage = 1;
+    private int inflicted_damage = 0;
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-    // private Animator animator;
+    private GameObject boulder;
 
     // Use this for initialization
     void Awake ()
 
     {
         animator =  GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer> ();
-        // animator = GetComponent<Animator> ();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     protected override void ComputeVelocity()
@@ -54,6 +56,8 @@ public class PlayerPlatformerController : PhysicsObject {
 
     }
 
+
+
     void Update ()
     {
       ComputeVelocity();
@@ -67,8 +71,24 @@ public class PlayerPlatformerController : PhysicsObject {
       }
 
       if (Input.GetButtonDown("Fire1")){
-        GameObject.Find("boulder").GetComponent<BoulderScript>().getHit(2);
+        //GameObject.Find("boulder").GetComponent<BoulderScript>().getHit(2);
         Debug.Log("got hit by adasdsa3");
       }
+
+      if (GetComponent<PhysicsObject>().collidedBoulder && Input.GetKeyDown(KeyCode.F)  )
+        {
+            Debug.Log("Collided with boulder!");
+            boulder = GameObject.FindGameObjectWithTag("Boulder");
+            if (boulder != null && inflicted_damage < 3)
+            {
+                int current_damage = boulder.GetComponent<BoulderScript>().getHit(inflicted_damage + damage);
+                inflicted_damage += damage;
+            }
+            else
+            {
+                inflicted_damage = 0;
+            }
+            
+        }
     }
 }

@@ -6,6 +6,7 @@ public class PhysicsObject : MonoBehaviour {
 
     public float minGroundNormalY = .65f;
     public float gravityModifier = 1f;
+    public bool collidedBoulder;
 
     protected Vector2 targetVelocity;
     protected bool grounded;
@@ -108,7 +109,11 @@ public class PhysicsObject : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Boulder")
         {
-            Debug.Log("Moi");
+            collidedBoulder = true;
+        }
+        else
+        {
+            collidedBoulder = false;
         }
     }
 
