@@ -17,7 +17,7 @@ public class completeLevel : MonoBehaviour {
     	Debug.Log("colin '" + col.gameObject.name + "'.");
 
         if(col.gameObject.name == "Pete"){
-	       gameObject.GetComponent("Scenemanager").nextLevel();
+	       GetComponent<scenemanager>().nextLevel();
         }
     }
 }

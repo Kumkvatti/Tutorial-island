@@ -8,16 +8,9 @@ using UnityEngine.SceneManagement;
 public class scenemanager : MonoBehaviour {
 
 	// Use this for initialization
-	public int TargetLevel = 0;
+	public int TargetLevel = 0;	
 
-	void Start () {
-        this.nextLevel();
-        // SceneManager.MergeScenes("MainScene","Scene0");
-        // SceneManager.MergeScenes(SceneManager.GetSceneByName("MainScene"), SceneManager.GetSceneByName("MainScene"));
-	}
-	
-
-    void nextLevel() {
+    public void nextLevel() {
     	string s = "Scene" + TargetLevel;
 
         Scene scene = SceneManager.GetActiveScene();
