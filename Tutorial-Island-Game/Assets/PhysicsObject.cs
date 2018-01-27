@@ -104,4 +104,12 @@ public class PhysicsObject : MonoBehaviour {
         rb2d.position = rb2d.position + move.normalized * distance;
     }
 
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Boulder")
+        {
+            Debug.Log("Moi");
+        }
+    }
+
 }
