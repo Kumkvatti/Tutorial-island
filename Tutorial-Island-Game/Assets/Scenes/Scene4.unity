@@ -237,9 +237,8 @@ MonoBehaviour:
       this was supposed to be about the similarities\u201D \n\n\u201CEeeh, I think
       I got some other reasons also, sorry, let me look through my notes\u201D\n"
     - "\u201CThey are pretty loyal, but I think that applies more just to dogs.\u2019
-      Not sure why I wrote that down as a similarity\u201D\n"
-    - "\u201CPutting everything else aside, I just wanted to say that cats and dogs
-      are CUTE!\u201D\n"
+      Not sure why I wrote that down as a similarity\u201D\n\n\u201CPutting everything
+      else aside, I just wanted to say that cats and dogs are CUTE!\u201D"
 --- !u!114 &420588249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,7 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff0a1f1c8621348ffb2085b175bb66de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 6
+  HP: 7
 --- !u!95 &1157167843
 Animator:
   serializedVersion: 3
