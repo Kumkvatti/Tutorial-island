@@ -15,9 +15,10 @@ public class OlviScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		pete = GameObject.FindGameObjectWithTag("Pete");
-		Debug.Log(pete.transform.position.x);
-		Debug.Log(transform.position.x);
+		if (pete)
+		{
 		if (pete.transform.position.x >= transform.position.x)
 			animator.SetBool("Drinked", true);
+		}
 	}
 }

@@ -70,6 +70,7 @@ public class PlayerPlatformerController : PhysicsObject {
       ComputeVelocity();
       if (targetVelocity.x != 0 )
       {
+
         animator.SetBool("Walking", true);
       }
       else
@@ -77,10 +78,8 @@ public class PlayerPlatformerController : PhysicsObject {
         animator.SetBool("Walking", false);
       }
 
-      Debug.Log(this.Punch0[this.expected]);
 
       boulder = GameObject.FindGameObjectWithTag("Boulder");
-      Debug.Log(boulder);
 
       if (boulder.transform.position.x - 2.5 < transform.position.x && Input.GetKeyDown(this.Punch0[this.expected])  )
         {
