@@ -95,8 +95,6 @@ public class PlayerPlatformerController : PhysicsObject {
       if(boulder){
         
         int maxIndex = this.Combos.IndexOf(this.Combos.Max());
-        Debug.Log("Maxing at " + maxIndex);
-        Debug.Log("for " + this.Punches[maxIndex][this.Combos[maxIndex]]);
 
         if (this.TryPunch(maxIndex)){
             for (int i = this.Combos.Count-1; i >= 0; i--){
