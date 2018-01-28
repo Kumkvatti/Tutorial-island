@@ -419,9 +419,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - "Lol\tT\xE4\xE4 on luola"
-    - ebin
-    - jippii
+    - "As a older person, I\u2019ll give you a advice, you better stop drinking that
+      alcohol or bad things will happen."
+    - "Anyways there\u2019s another rock before you, but this will also be easy if
+      you use your special ability The Secret Dragon punch folded one million times"
+    - 'Oh god, I thi-k th-t the s-gnal is getting we--er, -k listen carefu-ly: to
+      break the rock you have to'
+    - In--- -18-- t- --n-h r----- ---d
+    - "I\u2019ll say it again:\n\n----t 6--c- -o p--c- -e---y -ar-"
+    - 'once more
+
+
+      --pu- 618ch -- -u--- --all- h---'
+    - "\u2026.*Bzzt*...\n*tsup* :D"
 --- !u!114 &1396337385
 MonoBehaviour:
   m_ObjectHideFlags: 0
