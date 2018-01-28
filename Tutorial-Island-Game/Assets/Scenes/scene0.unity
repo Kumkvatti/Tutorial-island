@@ -608,8 +608,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - Woah do you remember how you ended up here? You were pretty drunk there and
-      still are. Apparently you are not the calmest person when drunk.
+    - "\u2026Woah do you remember how you ended up here? You were pretty drunk there
+      and still are. Apparently you are not the calmest person when drunk."
     - But anyways, we need to get you inside the cave, but the boulder is blocking
       your path.
     - Luckily you are THE Pete kauppinen. You have the latent ability to punch through
