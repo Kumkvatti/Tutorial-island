@@ -15,6 +15,8 @@ public class PlayerPlatformerController : PhysicsObject {
     private GameObject boulder;
 
     private KeyCode [] Punch0 = new KeyCode[3]  { KeyCode.Q,  KeyCode.W, KeyCode.E };
+    private KeyCode [] Punch1 = new KeyCode[5]  { KeyCode.Alpha6,  KeyCode.Alpha1, KeyCode.Alpha8, KeyCode.Alpha8, KeyCode.H };
+
     private int expected = 0;
     // Use this for initialization
     void Awake ()
@@ -80,7 +82,7 @@ public class PlayerPlatformerController : PhysicsObject {
       boulder = GameObject.FindGameObjectWithTag("Boulder");
       Debug.Log(boulder);
 
-      if (boulder.transform.position.x - 5 < transform.position.x && Input.GetKeyDown(this.Punch0[this.expected])  )
+      if (boulder.transform.position.x - 2.5 < transform.position.x && Input.GetKeyDown(this.Punch0[this.expected])  )
         {
             animator.SetBool("Punching", true);
             Invoke("EndPunch",0.1f);
@@ -95,9 +97,9 @@ public class PlayerPlatformerController : PhysicsObject {
         }
     }
 
-     
+
     void EndPunch()
     {
         animator.SetBool("Punching",false);
-    } 
+    }
 }
