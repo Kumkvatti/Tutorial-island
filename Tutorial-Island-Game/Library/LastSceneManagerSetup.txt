@@ -1,19 +1,25 @@
 sceneSetups:
+- path: Assets/MasterScene.unity
+  isLoaded: 1
+  isActive: 0
+- path: Assets/MainScene.unity
+  isLoaded: 1
+  isActive: 1
+- path: Assets/Scenes/scene0.unity
+  isLoaded: 1
+  isActive: 0
+- path: Assets/Scenes/Scene1.unity
+  isLoaded: 1
+  isActive: 0
 - path: Assets/Scenes/Scene2.unity
   isLoaded: 0
   isActive: 0
-- path: Assets/Scenes/Scene1.unity
-  isLoaded: 0
-  isActive: 0
-- path: Assets/MasterScene.unity
-  isLoaded: 1
-  isActive: 1
-- path: Assets/MainScene.unity
-  isLoaded: 1
-  isActive: 0
-- path: Assets/Scenes/scene0.unity
+- path: Assets/Scenes/Scene3.unity
   isLoaded: 0
   isActive: 0
 - path: Assets/Scenes/Scene4.unity
-  isLoaded: 1
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/Scene5.unity
+  isLoaded: 0
   isActive: 0
