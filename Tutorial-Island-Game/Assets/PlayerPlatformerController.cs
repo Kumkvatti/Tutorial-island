@@ -8,6 +8,7 @@ public class PlayerPlatformerController : PhysicsObject {
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
     public int frameCounter = 0;
+    private KeyCode upKey;
     private int damage = 1;
 
     private SpriteRenderer spriteRenderer;
@@ -75,19 +76,13 @@ public class PlayerPlatformerController : PhysicsObject {
         animator.SetBool("Walking", false);
       }
 
-      if (Input.GetButtonDown("Fire1")){
-        animator.SetBool("Punching", true);
-        boulder = GameObject.FindGameObjectWithTag("Boulder");
-        boulder.GetComponent<BoulderScript>().getHit(1);
-      }
-      if (Input.GetButtonUp("Fire1"))
-      {
-        animator.SetBool("Punching", false);
-      }
       Debug.Log(this.Punch0[this.expected]);
 
-      if (GetComponent<PhysicsObject>().collidedBoulder && Input.GetKeyDown(this.Punch0[this.expected])  )
+      boulder = GameObject.FindGameObjectWithTag("Boulder");
+      if (boulder.transform.position.x - 5 < transform.position.x && Input.GetKeyDown(this.Punch0[this.expected])  )
         {
+            animator.SetBool("Punching", true);
+            upKey = this.Punch0[this.expected];
             this.expected += 1;
             Debug.Log("Collided with boulder!");
             boulder = GameObject.FindGameObjectWithTag("Boulder");
@@ -96,5 +91,9 @@ public class PlayerPlatformerController : PhysicsObject {
                 int current_damage = boulder.GetComponent<BoulderScript>().getHit(1);
             }
         }
+      if (Input.GetKeyUp(upKey))
+      {
+        animator.SetBool("Punching", false);
+      }
     }
 }

@@ -20,7 +20,7 @@ public class CompleteCameraController : MonoBehaviour {
     void LateUpdate ()
     {
         // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-        transform.position = new Vector3(Math.Min(40, Math.Max(player.transform.position.x + offset.x, 0)), 0, -10);
+        transform.position = new Vector3(Math.Min(86, Math.Max(player.transform.position.x + offset.x, 0)), 0, -10);
         Debug.Log(transform.position.y);
         Debug.Log(transform.position.x);
         Debug.Log(transform.position.z);
