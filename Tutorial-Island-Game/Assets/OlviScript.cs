@@ -9,12 +9,14 @@ public class OlviScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+    animator = GetComponent<Animator>();
 	}
 
 	// Update is called once per frame
 	void Update () {
 		pete = GameObject.FindGameObjectWithTag("Pete");
+		Debug.Log(pete.transform.position.x);
+		Debug.Log(transform.position.x);
 		if (pete.transform.position.x >= transform.position.x)
 			animator.SetBool("Drinked", true);
 	}
