@@ -76,8 +76,13 @@ public class PlayerPlatformerController : PhysicsObject {
       }
 
       if (Input.GetButtonDown("Fire1")){
+        animator.SetBool("Punching", true);
         boulder = GameObject.FindGameObjectWithTag("Boulder");
         boulder.GetComponent<BoulderScript>().getHit(1);
+      }
+      if (Input.GetButtonUp("Fire1"))
+      {
+        animator.SetBool("Punching", false);
       }
       Debug.Log(this.Punch0[this.expected]);
 

@@ -19,43 +19,43 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: 5.36, y: 0, z: 0}
+        value: {x: 40, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 0.025
-        value: {x: 5.36, y: 0.29270154, z: 0}
+        value: {x: 40, y: 0.29270154, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 0.05
-        value: {x: 5.36, y: -0.0036723935, z: 0}
+        value: {x: 40, y: -0.0036723935, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 0.075
-        value: {x: 5.36, y: 0.28869236, z: 0}
+        value: {x: 40, y: 0.28869236, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 0.1
-        value: {x: 5.36, y: -0.001678288, z: 0}
+        value: {x: 40, y: -0.001678288, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 0.125
-        value: {x: 5.36, y: 0.28959787, z: 0}
+        value: {x: 40, y: 0.28959787, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 0.15
-        value: {x: 5.36, y: -0.006589532, z: 0}
+        value: {x: 40, y: -0.006589532, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -91,11 +91,32 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 0
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 95
+      customType: 8
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 95
+      customType: 8
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 0
+      attribute: 2
+      script: {fileID: 0}
+      typeID: 95
+      customType: 8
+      isPPtrCurve: 0
     pptrCurveMapping:
     - {fileID: 21300000, guid: 8ea6941f489e242ef9d19aaf4ffc9187, type: 3}
     - {fileID: 21300000, guid: 8ea6941f489e242ef9d19aaf4ffc9187, type: 3}
@@ -125,7 +146,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 5.36
+        value: 40
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -207,5 +228,5 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_GenerateMotionCurves: 0
+  m_GenerateMotionCurves: 1
   m_Events: []
