@@ -18,9 +18,10 @@ public class PlayerPlatformerController : PhysicsObject {
     private List<KeyCode> Punch0 = new List<KeyCode>(new KeyCode[] { KeyCode.Q,  KeyCode.W, KeyCode.E } );
     private List<KeyCode> Punch1 = new List<KeyCode>(new KeyCode[] { KeyCode.Alpha6,  KeyCode.Alpha1, KeyCode.Alpha8, KeyCode.C, KeyCode.H} );
     private List<KeyCode> Punch2 = new List<KeyCode>(new KeyCode[] { KeyCode.C,  KeyCode.A, KeyCode.A, KeyCode.Z, KeyCode.M, KeyCode.N} );
+    private List<KeyCode> Punch3 = new List<KeyCode>(new KeyCode[] { KeyCode.Alpha4,  KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha6, KeyCode.P} );
     private List<List<KeyCode>> Punches =  new List<List<KeyCode>>();
-    
-    private List<int> Combos = new List<int>(new int[] { 0, 0, 0 } );
+
+    private List<int> Combos = new List<int>(new int[] { 0, 0, 0, 0 } );
     // private int[,] Combos = new int[3,2] { {0,0}, {0,0}, {0,0} };
     // private int expected = 0;
 
@@ -31,6 +32,8 @@ public class PlayerPlatformerController : PhysicsObject {
         Punches.Add(Punch0);
         Punches.Add(Punch1);
         Punches.Add(Punch2);
+        Punches.Add(Punch3);
+
 
         animator =  GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -109,7 +112,7 @@ public class PlayerPlatformerController : PhysicsObject {
             animator.SetBool("Punching", true);
             Invoke("EndPunch",0.1f);
             int store = this.Combos[i] + 1;
-            this.Combos = new List<int>(new int[] { 0, 0, 0 } );
+            this.Combos = new List<int>(new int[] { 0, 0, 0, 0 } );
             this.Combos[i] = store;
             Debug.Log("Collided with boulder!");
             boulder = GameObject.FindGameObjectWithTag("Boulder");
