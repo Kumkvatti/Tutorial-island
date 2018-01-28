@@ -12,6 +12,7 @@ public class CutsceneController1 : MonoBehaviour {
 	private GameObject EventButton;
 	private GameObject Text1;
 	private GameObject Text2;
+	private GameObject Text3;
 
 
 	private Vector3 offset;         //Private variable to store the offset distance between the player and camera
@@ -37,31 +38,38 @@ public class CutsceneController1 : MonoBehaviour {
 			Text1.SetActive(false);
 			Text2 = GameObject.Find("Text2");
 			Text2.SetActive(false);
+			Text2 = GameObject.Find("Text3");
+			Text2.SetActive(false);
 			GameObject.Find("Fader").GetComponent<FaderScript>().SetScreenOverlayColor(Color.black);
 			GameObject.Find("Fader").GetComponent<FaderScript>().StartFade(new Color(0,0,0,0), 10.0f);
 			Canvas.SetActive(false);
 
 	}
 
-	void Update ()
-	{
-		if(GameObject.Find("Stunt Pete"))
+	void Update () {
+
+		if(GameObject.Find("Stunt Pete (1)"))
 		{
-			if ((GameObject.Find("Stunt Pete").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Still Waiting")))
+			if ((GameObject.Find("Stunt Pete (1)").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Still Waiting")))
 			{
 				Text1.SetActive(true);
 			}
-			if ((GameObject.Find("Stunt Pete").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Still Waiting!")))
+			if ((GameObject.Find("Stunt Pete (1)").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Still Waiting!")))
 			{
 				Text1.SetActive(false);
+				Text2.SetActive(true);
 			}
-			if ((GameObject.Find("Stunt Pete").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("More Waiting")))
+			if ((GameObject.Find("Stunt Pete (1)").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("More Waiting")))
 			{
 				Text2.SetActive(true);
 			}
-			if ((GameObject.Find("Stunt Pete").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Pause")))
+			if ((GameObject.Find("Stunt Pete (1)").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Attack")))
 			{
 				Text2.SetActive(false);
+			}
+			if ((GameObject.Find("Stunt Pete (1)").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Dragon punch")))
+			{
+				GameObject.Find("Fader").GetComponent<FaderScript>().SetScreenOverlayColor(Color.black);
 			}
 		}
 	}
