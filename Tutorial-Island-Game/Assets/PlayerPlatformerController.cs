@@ -18,7 +18,7 @@ public class PlayerPlatformerController : PhysicsObject {
     private List<KeyCode> Punch0 = new List<KeyCode>(new KeyCode[] { KeyCode.Q,  KeyCode.W, KeyCode.E } );
     private List<KeyCode> Punch1 = new List<KeyCode>(new KeyCode[] { KeyCode.Alpha6,  KeyCode.Alpha1, KeyCode.Alpha8, KeyCode.C, KeyCode.H} );
     private List<KeyCode> Punch2 = new List<KeyCode>(new KeyCode[] { KeyCode.C,  KeyCode.A, KeyCode.A, KeyCode.Z, KeyCode.M, KeyCode.N} );
-    private List<KeyCode> Punch3 = new List<KeyCode>(new KeyCode[] { KeyCode.Alpha4,  KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha6, KeyCode.P} );
+    private List<KeyCode> Punch3 = new List<KeyCode>(new KeyCode[] { KeyCode.B,  KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.W, KeyCode.E, KeyCode.T, KeyCode.P} );
     private List<List<KeyCode>> Punches =  new List<List<KeyCode>>();
 
     private List<int> Combos = new List<int>(new int[] { 0, 0, 0, 0 } );
