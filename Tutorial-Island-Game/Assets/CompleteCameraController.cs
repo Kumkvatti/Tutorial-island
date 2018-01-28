@@ -20,38 +20,11 @@ public class CompleteCameraController : MonoBehaviour {
     {
         offset = transform.position - player.transform.position;
 
-        GameObject.Find("Main Camera").GetComponent<Camera>().enabled = false;
-        Pete = GameObject.FindGameObjectWithTag("Pete");
-        DialogueManager = GameObject.Find("DialogueManager");
-        Canvas = GameObject.Find("Canvas");
-        EventButton = GameObject.Find("EventButton");
-        active = false;
-
-        Pete.SetActive(false);
-        DialogueManager.SetActive(false);
-        Canvas.SetActive(false);
-        EventButton.SetActive(false);
         //Calculate and store the offset value by getting the distance between the player's position and camera's position.
 
     }
 
-    void Update ()
-    {
-      if(GameObject.Find("Stunt Pete"))
-      {
-        if (GameObject.Find("Stunt Pete").GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("Still") && !active)
-        {
-          GameObject.Find("Main Camera").GetComponent<Camera>().enabled = true;
-          GameObject.FindGameObjectWithTag("Stunt").SetActive(false);
-          GameObject.Find("radio").SetActive(false);
-          Pete.SetActive(true);
-          DialogueManager.SetActive(true);
-          Canvas.SetActive(true);
-          EventButton.SetActive(true);
-          active = true;
-        }
-      }
-    }
+
 
     // LateUpdate is called after Update each frame
     void LateUpdate ()
