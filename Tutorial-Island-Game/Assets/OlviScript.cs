@@ -17,7 +17,10 @@ public class OlviScript : MonoBehaviour {
 		pete = GameObject.FindGameObjectWithTag("Pete");
 		//Debug.Log(pete.transform.position.x);
 		//Debug.Log(transform.position.x);
-		if (pete.transform.position.x >= transform.position.x)
-			animator.SetBool("Drinked", true);
+		if (pete)
+		{
+			if (pete.transform.position.x >= transform.position.x)
+				animator.SetBool("Drinked", true);
+		}
 	}
 }

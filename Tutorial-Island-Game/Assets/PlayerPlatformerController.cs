@@ -83,6 +83,7 @@ public class PlayerPlatformerController : PhysicsObject {
       ComputeVelocity();
       if (targetVelocity.x != 0 )
       {
+
         animator.SetBool("Walking", true);
       }
       else
