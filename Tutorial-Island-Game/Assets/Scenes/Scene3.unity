@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -761,24 +761,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - <color=#daa520>Do you fee</color><color=#3366ff>l good </color><color=#daa520>now
+    - '<color=#daa520>Do you fee</color><color=#3366ff>l good </color><color=#daa520>now
       </color><color=#00ff66>that you h</color><color=#daa520>ave drank </color><color=#3366ff>ove</color><color=#daa520>r
       100 beers.</color>
+
+'
     - "You are <color=#3366ff>seeing colors no</color>w, don\u2019t mind <color=#EE82EE>all
-      the blood</color> I have heard that some guys tried performing satanic rituals
-      by sacrificing humans here, but that matters not"
+      the blood</color> I have heard that some guys tried <color=#3366ff>performing
+      satanic rituals b</color>y sacrificing hu<color=#EE82EE>mans here, but that
+      matter</color>s not\n"
     - "<color=#3366ff>Lis</color>ten carefully: <color=#ff0000>I</color>\u2019ll tell
-      you about the secret blood drago<color=#ff0000>n pu</color>nch crea<color=#ff0000>t</color>ed
-      in the western <color=#ff0000>ca</color>verns of himalayas during the m<color=#3366ff>ing
-      d</color>ynasty"
-    - Th<color=#8B008B>e only pur</color>pose of this techniq<color=#337700>ue is
+      you about the secret bl<color=#daa520>oo</color>d drago<color=#ff0000>n pu</color>nch
+      crea<color=#ff0000>t</color>ed in the western <color=#ff0000>ca</color>verns
+      of him<color=#3366ff>a</color>layas during the m<color=#3366ff>ing d</color>ynasty\n"
+    - 'Th<color=#8B008B>e only pur</color>pose of this techniq<color=#337700>ue is
       to break the s</color>tone m<color=#ff0000>a</color>ze <color=#daa520>formation</color>
-      of <color=#ff0000>Z</color>huge Liang.
+      of <color=#ff0000>Z</color>hu<color=#bdb76b>ge</color> Liang.
+
+'
     - But b<color=#00aa88>eing as powerf</color>ul as it is it was se<color=#00aa88>aled
-      fro</color><color=#ff0000>m</color><color=#00ff66ray> the futhurer generations,
-      a</color><color=#ff0000>n</color><color=#00ff66>d</color><color=#EE82EE> passed
-      down from master to master, untill it finally was passe to you.</color>
-    - <color=#bdb76b>Now you have mastered the blood dragon<color=#00ff66> punch.</color>
+      fro</color>m<color=#00ff66> the futhurer generations, a</color><color=#ff0000>n</color><color=#00ff66>d</color><color=#EE82EE>
+      passed down from master to master, untill it finally was passe to you.</color>
+    - '<color=#bdb76b>No</color>w you have mast<color=#00ff66>er</color>ed the blood
+      dragon<color=#00ff66> punch.</color>
+
+'
     - "\u2026.*Bzzt*...\n*tsup* :D"
 --- !u!114 &1598688573
 MonoBehaviour:

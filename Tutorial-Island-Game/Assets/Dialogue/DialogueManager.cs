@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,40 +6,47 @@ using UnityEngine.UI;
 // manager that contains all dialogues in the game
 public class DialogueManager : MonoBehaviour {
 
-	public Text dialogueText;
+ public Text dialogueText;
 
-	public Animator animator;
+ public Animator animator;
 
-	private Queue<string> sentences;
-	// Use this for initialization
-	void Start () {
-		sentences = new Queue<string> ();
-	}
+ private string[] sentences;
+ private int index = -1;
 
-	public void StartDialogue(Dialogue dialogue) {
+ // Use this for initialization
+ void Start () {
+  sentences = new string[] {};
+ }
 
-		animator.SetBool ("IsOpen", true);
+ public void StartDialogue(Dialogue dialogue) {
 
-		sentences.Clear ();
-		foreach (string sentence in dialogue.sentences) {
-			sentences.Enqueue (sentence);
-		}
+  animator.SetBool ("IsOpen", true);
+  sentences = new string[dialogue.sentences.Length];
+  dialogue.sentences.CopyTo (sentences, 0);
+  DisplayNextSentence ();
+ }
 
-		DisplayNextSentence ();
-	}
+ public void DisplayNextSentence() {
+  index += 1;
+  if (index == sentences.Length) {
+   index = sentences.Length -1;
+  }
 
-	public void DisplayNextSentence() {
-		if (sentences.Count == 0) {
-			EndDialogue ();
-			return;
-		}
+  string sentence = sentences[index];
+  dialogueText.text = sentence;
+ }
 
-		string sentence = sentences.Dequeue ();
-		dialogueText.text = sentence;
-	}
+ public void DisplayPreviousSentence() {
+  index -= 1;
+  if (index == -1) {
+   index = 0;
+   return;
+  }
+  string sentence = sentences[index];
+  dialogueText.text = sentence;
+ }
 
-	void EndDialogue() {
-		animator.SetBool ("IsOpen", false);
-		Debug.Log ("End of conversation");
-	}
+ void EndDialogue() {
+  animator.SetBool ("IsOpen", false);
+ }
 }
