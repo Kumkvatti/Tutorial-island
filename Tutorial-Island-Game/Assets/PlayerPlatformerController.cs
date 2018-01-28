@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,14 +15,23 @@ public class PlayerPlatformerController : PhysicsObject {
     private Animator animator;
     private GameObject boulder;
 
-    private KeyCode [] Punch0 = new KeyCode[3]  { KeyCode.Q,  KeyCode.W, KeyCode.E };
-    private KeyCode [] Punch1 = new KeyCode[5]  { KeyCode.Alpha6,  KeyCode.Alpha1, KeyCode.Alpha8, KeyCode.Alpha8, KeyCode.H };
+    private List<KeyCode> Punch0 = new List<KeyCode>(new KeyCode[] { KeyCode.Q,  KeyCode.W, KeyCode.E } );
+    private List<KeyCode> Punch1 = new List<KeyCode>(new KeyCode[] { KeyCode.Alpha6,  KeyCode.Alpha1, KeyCode.Alpha8, KeyCode.C, KeyCode.H} );
+    private List<KeyCode> Punch2 = new List<KeyCode>(new KeyCode[] { KeyCode.C,  KeyCode.A, KeyCode.A, KeyCode.Z, KeyCode.M, KeyCode.N} );
+    private List<List<KeyCode>> Punches =  new List<List<KeyCode>>();
+    
+    private List<int> Combos = new List<int>(new int[] { 0, 0, 0 } );
+    // private int[,] Combos = new int[3,2] { {0,0}, {0,0}, {0,0} };
+    // private int expected = 0;
 
-    private int expected = 0;
+
     // Use this for initialization
     void Awake ()
-
     {
+        Punches.Add(Punch0);
+        Punches.Add(Punch1);
+        Punches.Add(Punch2);
+
         animator =  GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
@@ -77,26 +87,43 @@ public class PlayerPlatformerController : PhysicsObject {
         animator.SetBool("Walking", false);
       }
 
-      Debug.Log(this.Punch0[this.expected]);
-
       boulder = GameObject.FindGameObjectWithTag("Boulder");
-      Debug.Log(boulder);
+      if(boulder){
+        
+        int maxIndex = this.Combos.IndexOf(this.Combos.Max());
+        Debug.Log("Maxing at " + maxIndex);
+        Debug.Log("for " + this.Punches[maxIndex][this.Combos[maxIndex]]);
 
-      if (boulder.transform.position.x - 2.5 < transform.position.x && Input.GetKeyDown(this.Punch0[this.expected])  )
+        if (this.TryPunch(maxIndex)){
+            for (int i = this.Combos.Count-1; i >= 0; i--){
+                this.TryPunch(i);
+            }
+        }
+      }
+    }
+    bool TryPunch(int i){
+      boulder = GameObject.FindGameObjectWithTag("Boulder");
+      if (boulder.transform.position.x - 2.5 < transform.position.x && Input.GetKeyDown(this.Punches[i][this.Combos[i]])  )
         {
             animator.SetBool("Punching", true);
             Invoke("EndPunch",0.1f);
-            this.expected += 1;
+            int store = this.Combos[i] + 1;
+            this.Combos = new List<int>(new int[] { 0, 0, 0 } );
+            this.Combos[i] = store;
             Debug.Log("Collided with boulder!");
             boulder = GameObject.FindGameObjectWithTag("Boulder");
 
             if (boulder != null)
             {
-                int current_damage = boulder.GetComponent<BoulderScript>().getHit(1);
+                boulder.GetComponent<BoulderScript>().getHit(this.Combos[i]);
+                if (this.Combos[i] >= this.Punches[i].Count){
+                    this.Combos[i] = 0;
+                }
+                return false;
             }
         }
+        return true;
     }
-
 
     void EndPunch()
     {
