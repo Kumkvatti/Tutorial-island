@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class BoulderScript : MonoBehaviour {
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
-    private int HP = 3;
+    public int HP = 0;
 
     // Use this for initialization
     void Start () {
@@ -20,11 +22,10 @@ public class BoulderScript : MonoBehaviour {
 	}
 
 	public int getHit(int s){
-	    Debug.Log("got hit by '" + s + "'.");
-	    this.HP -= s;
-        animator.SetInteger("Brokenness", 3 - this.HP);
+	    Debug.Log("got hit by '" + s + "' with " + this.HP +" hp.");
+        animator.SetInteger("Brokenness", 3 + Math.Min(0,s-this.HP));
         // If you put destroying of gameobject here when s==3, for some reason collision box exists
-        if( this.HP == 0 ){
+        if( this.HP <= s ){
 			GetComponent<BoxCollider2D>().enabled = false;
         }
         return s;
