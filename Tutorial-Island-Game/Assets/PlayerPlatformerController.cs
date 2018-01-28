@@ -48,6 +48,10 @@ public class PlayerPlatformerController : PhysicsObject {
         {
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
+        if (move.x == 0.0f)
+        {
+            spriteRenderer.flipX = !spriteRenderer.flipX;
+        }
 
         // animator.SetBool ("grounded", grounded);
         // animator.SetFloat ("velocityX", Mathf.Abs (velocity.x) / maxSpeed);
@@ -72,8 +76,8 @@ public class PlayerPlatformerController : PhysicsObject {
       }
 
       if (Input.GetButtonDown("Fire1")){
-//        GameObject.Find("boulder").GetComponent<BoulderScript>().getHit(2);
-//        Debug.Log("got hit by adasdsa3");
+        boulder = GameObject.FindGameObjectWithTag("Boulder");
+        boulder.GetComponent<BoulderScript>().getHit(1);
       }
       Debug.Log(this.Punch0[this.expected]);
 
